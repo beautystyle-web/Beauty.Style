@@ -1,0 +1,399 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #4a2633;
+
+    background-image:
+        linear-gradient(rgba(255, 248, 250, 0.72), rgba(255, 248, 250, 0.72)),
+        url("imagenes/fondo.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    min-height: 100vh;
+}
+
+.portada {
+    text-align: center;
+    padding-top: 60px;
+}
+
+h1 {
+    font-size: 50px;
+    color: #b85c7a;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    font-size: 20px;
+    color: #6f4655;
+}
+
+.tarjeta {
+    width: 400px;
+    margin: 40px auto;
+    padding: 35px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(120, 60, 80, 0.15);
+}
+
+.tarjeta h2 {
+    color: #b85c7a;
+}
+
+.tarjeta p {
+    color: #6f4655;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #e4b8c8;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+button {
+    margin-top: 25px;
+    padding: 13px 25px;
+    border: none;
+    border-radius: 25px;
+    background-color: #b85c7a;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #963f5e;
+}
+.encuesta {
+    display: none;
+}
+.encuesta {
+    width: 700px;
+    margin: 70px auto;
+    text-align: center;
+}
+
+.numero {
+    color: #b85c7a;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.encuesta h2 {
+    color: #4a2633;
+    font-size: 28px;
+    margin-bottom: 35px;
+}
+
+.opciones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.opcion {
+    background-color: white;
+    color: #6f4655;
+    border: 2px solid #f0cbd8;
+    border-radius: 15px;
+    padding: 25px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.opcion:hover {
+    background-color: #fce1eb;
+    border-color: #b85c7a;
+    transform: translateY(-3px);
+}
+.opcion.seleccionada {
+    background-color: #f3bfd1;
+    border-color: #b85c7a;
+    color: #4a2633;
+    transform: scale(1.03);
+}
+#siguiente {
+    margin-top: 30px;
+    padding: 13px 30px;
+    border: none;
+    border-radius: 25px;
+    background-color: #b85c7a;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#siguiente:hover {
+    background-color: #963f5e;
+}
+.pregunta2 {
+    display: none;
+}
+.opcion img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+/* PANTALLA FINAL */
+
+.final {
+    display: none;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.final-tarjeta {
+    max-width: 500px;
+}
+
+.final-tarjeta h1 {
+    font-size: 35px;
+}
+
+.final-tarjeta p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+/* RESULTADOS */
+
+.resultados {
+    display: none;
+    width: 700px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.resultados h1 {
+    font-size: 40px;
+    color: #b85c7a;
+}
+
+.resultados > p {
+    color: #6f4655;
+    font-size: 18px;
+}
+
+.grafica {
+    background-color: white;
+    padding: 35px;
+    margin-top: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(120, 60, 80, 0.15);
+}
+
+.grafica h2 {
+    color: #4a2633;
+    margin-bottom: 30px;
+}
+
+.barra {
+    margin: 20px 0;
+    text-align: left;
+}
+
+.barra span {
+    font-weight: bold;
+    color: #6f4655;
+}
+
+.barra-fondo {
+    width: 100%;
+    height: 25px;
+    background-color: #f5dce5;
+    border-radius: 20px;
+    margin-top: 7px;
+    overflow: hidden;
+}
+
+.barra-relleno {
+    width: 0%;
+    height: 100%;
+    background-color: #b85c7a;
+    border-radius: 20px;
+    transition: width 1s;
+}
+.agradecimiento {
+    background-color: white;
+    margin-top: 30px;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(120, 60, 80, 0.15);
+}
+
+.agradecimiento h2 {
+    color: #b85c7a;
+    margin-bottom: 10px;
+}
+
+.agradecimiento p {
+    color: #6f4655;
+    font-size: 16px;
+    line-height: 1.6;
+}
+/* ==============================
+   ADAPTACIÓN PARA CELULARES
+   ============================== */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    /* PORTADA */
+
+    .portada {
+        padding-top: 30px;
+    }
+
+    .portada h1 {
+        font-size: 38px;
+    }
+
+    .subtitulo {
+        font-size: 17px;
+    }
+
+    .tarjeta {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 30px auto;
+        padding: 25px 20px;
+    }
+
+    .tarjeta h2 {
+        font-size: 24px;
+    }
+
+    /* ENCUESTAS */
+
+    .encuesta {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 35px auto;
+    }
+
+    .encuesta h2 {
+        font-size: 23px;
+        line-height: 1.4;
+    }
+
+    .numero {
+        font-size: 14px;
+    }
+
+    /* OPCIONES */
+
+    .opciones {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .opcion {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 20px;
+        font-size: 17px;
+    }
+
+    /* IMÁGENES DE LAS OPCIONES */
+
+    .opcion img {
+        height: 200px;
+    }
+
+    /* BOTONES */
+
+    button {
+        max-width: 100%;
+    }
+
+    /* RESULTADOS */
+
+    .resultados {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 35px auto;
+    }
+
+    .resultados h1 {
+        font-size: 32px;
+        line-height: 1.3;
+    }
+
+    .resultados > p {
+        font-size: 16px;
+    }
+
+    .grafica {
+        padding: 20px 15px;
+    }
+
+    .grafica h2 {
+        font-size: 21px;
+    }
+
+    /* MENSAJE FINAL */
+
+    .agradecimiento {
+        padding: 20px 15px;
+    }
+
+    .agradecimiento h2 {
+        font-size: 23px;
+    }
+
+    .agradecimiento p {
+        font-size: 15px;
+    }
+}
+.final {
+    display: none;
+    width: 700px;
+    margin: 80px auto;
+    padding: 55px 45px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(120, 60, 80, 0.18);
+}
+
+#diagnostico {
+    margin: 0 auto 40px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 34px;
+    font-style: italic;
+    line-height: 1.5;
+    color: #6f4655;
+}
+
+@media (max-width: 600px) {
+    .final {
+        width: 100%;
+        padding: 40px 22px;
+        margin: 50px auto;
+    }
+
+    #diagnostico {
+        font-size: 26px;
+    }
+}
